@@ -1,0 +1,19 @@
+{
+    "name": "azuredevops-work-item",
+    "description": "Notification workitem to Discord",
+    "version": "1.0.0",
+    "devDependencies": {
+        "express": "*",
+        "js-yaml": "^4.1.0",
+        "nodemon": "^2.0.20"
+    },
+    "scripts": {
+        "start": "coffee -o lib/ -c src/waza.coffee",
+        "start:dev": "nodemon server.js"
+    },
+    "main": "server.js",
+    "dependencies": {
+        "axios": "^1.2.1",
+        "dotenv": "^16.0.3"
+    }
+}

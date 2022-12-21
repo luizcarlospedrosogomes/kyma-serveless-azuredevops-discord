@@ -1,0 +1,17 @@
+apiVersion: gateway.kyma-project.io/v1beta1
+kind: APIRule
+metadata:
+  name: work-item
+spec:
+  gateway: kyma-gateway.kyma-system.svc.cluster.local
+  host: work-item
+  service:
+    name: work-item
+    port: 80
+  rules:
+    - path: /.*
+      accessStrategies:
+        - config: {}
+          handler: noop
+      methods:
+        - POST
